@@ -12,6 +12,11 @@
 		3BA8E3D92157039700D7926D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA8E3D82157039700D7926D /* Assets.xcassets */; };
 		3BA8E3DC2157039700D7926D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA8E3DA2157039700D7926D /* LaunchScreen.storyboard */; };
 		3BA8E3EC2157041300D7926D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA8E3EB2157041300D7926D /* CloudKit.framework */; };
+		3BA8E3EE215707E300D7926D /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3ED215707E300D7926D /* EntryListTableViewController.swift */; };
+		3BA8E3F0215707F000D7926D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3EF215707F000D7926D /* Entry.swift */; };
+		3BA8E3F32157081500D7926D /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3F22157081500D7926D /* EntryController.swift */; };
+		3BA8E3F52157082600D7926D /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3F42157082600D7926D /* CloudKitManager.swift */; };
+		3BA8E3F72157083900D7926D /* DateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3F62157083900D7926D /* DateFormater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		3BA8E3DD2157039700D7926D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA8E3E92157041000D7926D /* Journal_CK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Journal_CK.entitlements; sourceTree = "<group>"; };
 		3BA8E3EB2157041300D7926D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3BA8E3ED215707E300D7926D /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		3BA8E3EF215707F000D7926D /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		3BA8E3F22157081500D7926D /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		3BA8E3F42157082600D7926D /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		3BA8E3F62157083900D7926D /* DateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 				3BA8E3E92157041000D7926D /* Journal_CK.entitlements */,
 				3BA8E3E8215703EC00D7926D /* Helpers */,
 				3BA8E3E7215703E000D7926D /* CloudManager */,
+				3BA8E3F1215707FF00D7926D /* ModelController */,
 				3BA8E3E6215703D900D7926D /* Model */,
 				3BA8E3E5215703C100D7926D /* ViewControllers */,
 				3BA8E3E4215703BA00D7926D /* UI */,
@@ -90,6 +101,7 @@
 		3BA8E3E5215703C100D7926D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8E3ED215707E300D7926D /* EntryListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -97,6 +109,7 @@
 		3BA8E3E6215703D900D7926D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8E3EF215707F000D7926D /* Entry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,6 +117,7 @@
 		3BA8E3E7215703E000D7926D /* CloudManager */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8E3F42157082600D7926D /* CloudKitManager.swift */,
 			);
 			path = CloudManager;
 			sourceTree = "<group>";
@@ -111,6 +125,7 @@
 		3BA8E3E8215703EC00D7926D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8E3F62157083900D7926D /* DateFormater.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -121,6 +136,14 @@
 				3BA8E3EB2157041300D7926D /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BA8E3F1215707FF00D7926D /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8E3F22157081500D7926D /* EntryController.swift */,
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA8E3F0215707F000D7926D /* Entry.swift in Sources */,
+				3BA8E3EE215707E300D7926D /* EntryListTableViewController.swift in Sources */,
+				3BA8E3F32157081500D7926D /* EntryController.swift in Sources */,
 				3BA8E3D22157039500D7926D /* AppDelegate.swift in Sources */,
+				3BA8E3F52157082600D7926D /* CloudKitManager.swift in Sources */,
+				3BA8E3F72157083900D7926D /* DateFormater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
