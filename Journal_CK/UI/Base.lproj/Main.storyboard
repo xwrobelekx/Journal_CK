@@ -12,13 +12,13 @@
         <!--Entries List-->
         <scene sceneID="Z2u-hK-i1i">
             <objects>
-                <tableViewController id="urH-mg-S4R" sceneMemberID="viewController">
+                <tableViewController id="urH-mg-S4R" customClass="EntryListTableViewController" customModule="Journal_CK" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uzw-kU-SkO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Zui-vN-U82" detailTextLabel="HQg-eC-eNQ" style="IBUITableViewCellStyleSubtitle" id="ctT-c0-f5f">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stupidCell" textLabel="Zui-vN-U82" detailTextLabel="HQg-eC-eNQ" style="IBUITableViewCellStyleSubtitle" id="ctT-c0-f5f">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ctT-c0-f5f" id="3lS-5C-mna">
@@ -67,7 +67,7 @@
         <!--Title-->
         <scene sceneID="Rm9-4c-a6Z">
             <objects>
-                <viewController id="Gdt-Ue-70b" sceneMemberID="viewController">
+                <viewController id="Gdt-Ue-70b" customClass="ComposeEntryViewController" customModule="Journal_CK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L0M-5t-eD1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0ry-qk-ShH" firstAttribute="centerX" secondItem="tD3-FR-9zb" secondAttribute="centerX" id="4fN-Di-ElF"/>
                             <constraint firstItem="4Vh-jm-4iT" firstAttribute="top" secondItem="0ry-qk-ShH" secondAttribute="bottom" constant="20" id="5Eq-rg-wIN"/>
@@ -100,8 +100,16 @@
                         <viewLayoutGuide key="safeArea" id="tD3-FR-9zb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ehv-TY-ZB1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jv1-8d-hK7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jv1-8d-hK7">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Gdt-Ue-70b" id="KWe-3Z-agV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="noteTextField" destination="4Vh-jm-4iT" id="T1S-3V-2t0"/>
+                        <outlet property="titleTextField" destination="0ry-qk-ShH" id="1op-Xi-1cg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svG-qs-oNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

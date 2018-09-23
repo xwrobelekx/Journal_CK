@@ -11,22 +11,45 @@ import CloudKit
 
 class EntryController {
     
+    
     //MARK: - Shared Instance
     
     static let shared = EntryController()
     private init() {}
     
+    //MARK: - Notification
+    let entriesWereUpdatedNotification = Notification.Name("entriesWereUpdated")
+    
     
     //MARK: - Source of Truth
-    var entries: [Entry] = []
+    var entries: [Entry] = [] {
+        didSet{
+            //need to reload data in list table view when this changes
+            NotificationCenter.default.post(name: entriesWereUpdatedNotification, object: nil)
+        }
+    }
+    
+    
+    //MARK: CRUD Methods
+    
+    func createNewEntry(title: String, note: String?){
+        let entry = Entry(title: title, note: note)
+        saveRecordToiCloud(entry: entry)
+    }
+    
+    
+    func updateEntry(entry: Entry, title: String, note: String?, date: Date? = Date()){
+        entry.title = title
+        entry.note = note
+        entry.dateStamp = date
+        saveRecordToiCloud(entry: entry)
+    }
     
     
     //MARK: Save Record to iCloud
+
+    func saveRecordToiCloud(entry: Entry){
     
-    func saveRecordToiCloud(title: String, note: String?){
-        
-        let entry = Entry(title: title, note: note)
-        
         CloudKitManager.shared.saveRecordToiCloud(record: entry.cloudKitRecord, database: CKContainer.default().publicCloudDatabase){ (error) in
             if let error = error {
                 print("Error Saving To iCloud Database: \(error.localizedDescription)")

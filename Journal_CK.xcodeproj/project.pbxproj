@@ -17,6 +17,7 @@
 		3BA8E3F32157081500D7926D /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3F22157081500D7926D /* EntryController.swift */; };
 		3BA8E3F52157082600D7926D /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3F42157082600D7926D /* CloudKitManager.swift */; };
 		3BA8E3F72157083900D7926D /* DateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3F62157083900D7926D /* DateFormater.swift */; };
+		3BA8E3F9215728B300D7926D /* ComposeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8E3F8215728B300D7926D /* ComposeEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		3BA8E3F22157081500D7926D /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		3BA8E3F42157082600D7926D /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		3BA8E3F62157083900D7926D /* DateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormater.swift; sourceTree = "<group>"; };
+		3BA8E3F8215728B300D7926D /* ComposeEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA8E3ED215707E300D7926D /* EntryListTableViewController.swift */,
+				3BA8E3F8215728B300D7926D /* ComposeEntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				3BA8E3EE215707E300D7926D /* EntryListTableViewController.swift in Sources */,
 				3BA8E3F32157081500D7926D /* EntryController.swift in Sources */,
 				3BA8E3D22157039500D7926D /* AppDelegate.swift in Sources */,
+				3BA8E3F9215728B300D7926D /* ComposeEntryViewController.swift in Sources */,
 				3BA8E3F52157082600D7926D /* CloudKitManager.swift in Sources */,
 				3BA8E3F72157083900D7926D /* DateFormater.swift in Sources */,
 			);

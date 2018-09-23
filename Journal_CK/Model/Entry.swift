@@ -21,9 +21,9 @@ class Entry {
     
     //MARK: - Properties
     
-    let title     : String
-    let note      : String?
-    let dateStamp : Date?
+    var title     : String
+    var note      : String?
+    var dateStamp : Date?
     
     init(title: String, note: String?, dateStamp: Date = Date()){
         self.title     = title
@@ -37,6 +37,7 @@ class Entry {
     var cloudKitRecord: CKRecord {
         
         let record = CKRecord(recordType: Entry.TypeKey)
+        record.setValue(title, forKey: TitleKey)
         record.setValue(note, forKey: NoteKey)
         record.setValue(dateStamp, forKey: DateStampKey)
         return record
